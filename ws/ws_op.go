@@ -87,7 +87,7 @@ func (a *WsClient) Login(apiKey, secKey, passPhrase string, timeOut ...int) (res
 
 	timestamp := EpochTime()
 
-	preHash := PreHashString(timestamp, rest.GET, "/users/self/verify", "")
+	preHash := PreHashString(timestamp, GET, "/users/self/verify", "")
 	//fmt.Println("preHash:", preHash)
 	var sign string
 	if sign, err = HmacSha256Base64Signer(preHash, secKey); err != nil {
