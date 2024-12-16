@@ -2,11 +2,11 @@ package ws
 
 import (
 	"errors"
-	. "v5sdk_go/ws/wImpl"
+	. "github.com/phyer/v5sdkgo/ws/wImpl"
 )
 
 /*
-	产品频道
+产品频道
 */
 func (a *WsClient) PubInstruemnts(op string, params []map[string]string, timeOut ...int) (res bool, msg []*Msg, err error) {
 
@@ -19,7 +19,7 @@ func (a *WsClient) PubStatus(op string, timeOut ...int) (res bool, msg []*Msg, e
 }
 
 /*
-	行情频道
+行情频道
 */
 func (a *WsClient) PubTickers(op string, params []map[string]string, timeOut ...int) (res bool, msg []*Msg, err error) {
 
@@ -27,14 +27,14 @@ func (a *WsClient) PubTickers(op string, params []map[string]string, timeOut ...
 }
 
 /*
-	持仓总量频道
+持仓总量频道
 */
 func (a *WsClient) PubOpenInsterest(op string, params []map[string]string, timeOut ...int) (res bool, msg []*Msg, err error) {
 	return a.PubChannel(EVENT_BOOK_OPEN_INTEREST, op, params, PERIOD_NONE, timeOut...)
 }
 
 /*
-	K线频道
+K线频道
 */
 func (a *WsClient) PubKLine(op string, period Period, params []map[string]string, timeOut ...int) (res bool, msg []*Msg, err error) {
 
@@ -42,7 +42,7 @@ func (a *WsClient) PubKLine(op string, period Period, params []map[string]string
 }
 
 /*
-	交易频道
+交易频道
 */
 func (a *WsClient) PubTrade(op string, params []map[string]string, timeOut ...int) (res bool, msg []*Msg, err error) {
 
@@ -50,7 +50,7 @@ func (a *WsClient) PubTrade(op string, params []map[string]string, timeOut ...in
 }
 
 /*
-	预估交割/行权价格频道
+预估交割/行权价格频道
 */
 func (a *WsClient) PubEstDePrice(op string, params []map[string]string, timeOut ...int) (res bool, msg []*Msg, err error) {
 
@@ -59,7 +59,7 @@ func (a *WsClient) PubEstDePrice(op string, params []map[string]string, timeOut 
 }
 
 /*
-	标记价格频道
+标记价格频道
 */
 func (a *WsClient) PubMarkPrice(op string, params []map[string]string, timeOut ...int) (res bool, msg []*Msg, err error) {
 
@@ -67,7 +67,7 @@ func (a *WsClient) PubMarkPrice(op string, params []map[string]string, timeOut .
 }
 
 /*
-	标记价格K线频道
+标记价格K线频道
 */
 func (a *WsClient) PubMarkPriceCandle(op string, pd Period, params []map[string]string, timeOut ...int) (res bool, msg []*Msg, err error) {
 
@@ -75,7 +75,7 @@ func (a *WsClient) PubMarkPriceCandle(op string, pd Period, params []map[string]
 }
 
 /*
-	限价频道
+限价频道
 */
 func (a *WsClient) PubLimitPrice(op string, params []map[string]string, timeOut ...int) (res bool, msg []*Msg, err error) {
 
@@ -83,7 +83,7 @@ func (a *WsClient) PubLimitPrice(op string, params []map[string]string, timeOut 
 }
 
 /*
-	深度频道
+深度频道
 */
 func (a *WsClient) PubOrderBooks(op string, channel string, params []map[string]string, timeOut ...int) (res bool, msg []*Msg, err error) {
 
@@ -109,7 +109,7 @@ func (a *WsClient) PubOrderBooks(op string, channel string, params []map[string]
 }
 
 /*
-	期权定价频道
+期权定价频道
 */
 func (a *WsClient) PubOptionSummary(op string, params []map[string]string, timeOut ...int) (res bool, msg []*Msg, err error) {
 
@@ -117,7 +117,7 @@ func (a *WsClient) PubOptionSummary(op string, params []map[string]string, timeO
 }
 
 /*
-	资金费率频道
+资金费率频道
 */
 func (a *WsClient) PubFundRate(op string, params []map[string]string, timeOut ...int) (res bool, msg []*Msg, err error) {
 
@@ -125,7 +125,7 @@ func (a *WsClient) PubFundRate(op string, params []map[string]string, timeOut ..
 }
 
 /*
-	指数K线频道
+指数K线频道
 */
 func (a *WsClient) PubKLineIndex(op string, pd Period, params []map[string]string, timeOut ...int) (res bool, msg []*Msg, err error) {
 
@@ -133,7 +133,7 @@ func (a *WsClient) PubKLineIndex(op string, pd Period, params []map[string]strin
 }
 
 /*
-	指数行情频道
+指数行情频道
 */
 func (a *WsClient) PubIndexTickers(op string, params []map[string]string, timeOut ...int) (res bool, msg []*Msg, err error) {
 

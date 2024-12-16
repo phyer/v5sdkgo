@@ -2,9 +2,9 @@ package ws
 
 import (
 	"fmt"
+	. "github.com/phyer/v5sdkgo/ws/wImpl"
 	"testing"
 	"time"
-	. "v5sdk_go/ws/wImpl"
 )
 
 func PrintDetail(d *ProcessDetail) {
@@ -155,7 +155,7 @@ func (r *WsClient) makeOrder(instId string, tdMode string, side string, ordType 
 // }
 
 /*
-	修改订单
+修改订单
 */
 func TestAmendlOrder(t *testing.T) {
 	r := prework_pri(CROSS_ACCOUNT)

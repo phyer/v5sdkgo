@@ -1,17 +1,18 @@
-package main
+package v5sdkgo
 
 import (
 	"context"
 	"fmt"
+	. "github.com/phyer/v5sdkgo/rest"
+	. "github.com/phyer/v5sdkgo/ws"
+
 	"log"
 	"time"
-	. "v5sdk_go/rest"
-	. "v5sdk_go/ws"
 )
 
 /*
-	rest API请求
-	更多示例请查看 rest/rest_test.go
+rest API请求
+更多示例请查看 rest/rest_test.go
 */
 func REST() {
 	// 设置您的APIKey
