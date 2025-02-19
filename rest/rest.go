@@ -164,6 +164,9 @@ func (this *RESTAPI) Run(ctx context.Context) (res *RESTAPIResult, err error) {
 
 	client := &http.Client{
 		Timeout: this.Timeout,
+		Transport: &http.Transport{
+			Proxy: http.ProxyFromEnvironment,
+		},
 	}
 
 	uri, body, err := this.GenReqInfo()
